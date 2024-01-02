@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{baslik}}</title>
+  <style>
+    body {
+      background-color: #f7f7f7; /* Arka plan rengi */
+      color: #333; /* Metin rengi */
+      font-family: Arial, sans-serif; /* Font ailesi */
+    }
+
+    h1 {
+      color: #0066cc; /* Başlık rengi */
+    }
+
+    ul {
+      list-style-type: none; /* Liste işareti olmadan */
+      padding: 10px;
+      background-color: #fff; /* Arka plan rengi */
+      border: 1px solid #ddd; /* Kenarlık rengi */
+    }
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd; /* Kenarlık rengi */
+    }
+  </style>
+</head>
+<body>
+  <h1>{{ baslik }}</h1>
+  <ul>
+    {% for yazi in yazilar %}
+      <li>{{ yazi }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

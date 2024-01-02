@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>home_page</title>
+  <style>
+    body {
+      background-color: #f0f0f0; /* Arka plan rengi */
+      color: #333; /* Metin rengi */
+      font-family: Arial, sans-serif; /* Font ailesi */
+    }
+
+    h1 {
+      color: #0066cc; /* Başlık rengi */
+    }
+
+    ul {
+      list-style-type: none; /* Liste işareti olmadan */
+      padding: 0;
+      background-color: #fff; /* Arka plan rengi */
+      border: 1px solid #ddd; /* Kenarlık rengi */
+    }
+
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd; /* Kenarlık rengi */
+    }
+
+    a {
+      text-decoration: none; /* Bağlantı alt çizgisi olmadan */
+      color: #0066cc; /* Bağlantı rengi */
+    }
+
+    a:hover {
+      text-decoration: underline; /* Fare üzerine gelince alt çizgi */
+    }
+  </style>
+</head>
+<body>
+  <h1>Ana Sayfa</h1>
+  <ul>
+    {% for b in basliklar %}
+      <li><a href='/baslik/{{ b.id }}'>{{ b.baslik }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
